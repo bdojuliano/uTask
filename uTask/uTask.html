@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>uTask 3.0</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="new_task.js" defer></script>
+    <script src="add_task.js" defer></script>
+</head>
+
+<body>
+    <header id="header-content">
+        <img src="logo.svg" alt="Logo da Unect">
+        <h1 id="header-tittle">uTask 3.0</h1>
+        <div id="dark-mode-toggle">
+            <span id="light_mode" class="material-icons-outlined">
+                light_mode
+            </span>
+        </div>
+    </header>
+    <main id="main-content">
+        <section id="frase-do-dia">
+            <div id="frase-do-dia-lighter-background">
+                <span id="frase-do-dia-icon" class="material-icons-outlined">
+                    tips_and_updates
+                </span>
+            </div>
+            <div id="frase-do-dia-content">
+                <h1 id="frase-do-dia-titulo">Frase do dia</h1>
+                <p id="frase-do-dia-mensagem">queria ser um passarinho, mas um passarinho não posso ser
+                    passarinho só pensa em voar e eu só penso em ******
+                </p>
+            </div>
+        </section>
+        <section id="task-list">
+            <div id="a-fazer">
+                <div id="head-task-a-fazer">
+                    <h1 id="a-fazer-tittle">A fazer</h1>
+                    <button id="add-task">
+                        <span class="material-icons-outlined">
+                        add
+                        </span>
+                    </button>
+                </div>
+                <ul id="a-fazer-task-list" class="tasks"></ul>
+            </div>
+            <div id="em-andamento">
+                <h1 class="em-andamento-tittle">Em andamento</h1>
+                <div id="em-andamento-task-list" class="tasks">
+                </div>
+            </div>
+            <div id="feito">
+                <h1 class="feito-tittle">Feito</h1>
+                <div class="feito-task-list">
+                    <div class="feito-task">
+                        <div id="feito-task-content" class="tasks">
+                        </div>
+                        <div>
+                            <img>
+                            <img>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="new-task" class="">
+            <div id="new-task-modal">
+                <div id="modal-header">
+                    <div id="modal-tittle-container">
+                        <h1 id="modal-tittle">Nova Task</h1>
+                        <div id="linha-azul"></div>
+                    </div>
+                    <button id="modal-close">
+                        <span class="material-icons-outlined">
+                        close
+                        </span>
+                    </button>
+                </div>
+                <h1 id="new-task-tittle">Título *</h1>
+                <form>
+                    <input id="new-task-tittle-form" type="text" name="tittle">
+                    <h1 id="new-task-description">Descrição</h1>
+                    <input id="new-task-description-form" type="text" name="description">
+                </form>
+                <button id="create-task"><p>Criar task</p></button>
+            </div>
+            
+        </section>
+    </main>
+    <footer class="footer-content">
+        <h1 class="footer-processo-de-trainee">© Processo de Trainee <a id="link-unect" href="https://unect.com.br/">
+                Unect Jr.</a> 2023.1</h1>
+        <h1 class="footer-authorship">Feito com <img class="footer-icon" src="favorite.svg"> por <strong>Betina
+                Juliano</strong></h1>
+    </footer>
+</body>
+
+</html>
