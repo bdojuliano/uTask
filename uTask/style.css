@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+    background: #EEEEEE;
+    overflow: hidden;
+}
+
+#header-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background: #226ED8;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+#header-tittle{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #FAFAFA;
+}
+
+#dark-mode-toggle{
+    position: relative;
+    height: 24px;
+    width: 50px;
+    background: linear-gradient(90deg, #FFC93F 0%, #FFC93F 0.01%, #FFE03F 100%);
+    border-radius: 50px;
+}
+
+#light_mode{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FBB910;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    background-color:#FFFFFF;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+#frase-do-dia{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 7px;
+    width: 45em;
+    height: 119px;
+    padding: 16px;
+    margin: 32px 0px 0px 160px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+
+}
+
+
+#frase-do-dia-icon-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFCEE;
+    border: 5px solid #FFFCEE;
+    border-radius: 50%;
+}
+
+#frase-do-dia-icon{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: #FBB910;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    background: #FFF5C0;
+    border-radius: 50%;
+
+}
+
+
+#frase-do-dia-titulo{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #141414;
+
+}
+
+#frase-do-dia-mensagem{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #141414;
+
+}
+
+#fdd-responsive{
+    display: none;
+}
+
+#slider-next{
+    display: none;
+    height: 2px;
+}
+
+#slider-back{
+    display: none;
+    height: 2px;
+}
+
+#task-list{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 160px 20px 160px;   
+
+}
+
+.task-list-content{
+    display: flex;
+    flex-direction: row;
+    column-gap: 90px;
+}
+
+.tasks{
+    width: 20.5em;
+    height: 337px;
+    background: #E5E5E5;
+    border-radius: 10px;
+    margin: 8px 0px 18px 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.tasks::-webkit-scrollbar{
+    width: 6px;
+}
+
+.tasks::-webkit-scrollbar-thumb{
+    background: #C4C4C4;
+    border-radius: 20px;
+}
+
+#head-task-to-do{
+    display: flex;
+    justify-content: space-between;
+}
+
+#add-task{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #226ED8;
+    width: 30px;
+    height: 30px;
+    border: 2px solid  #226ED8;
+    border-radius: 50%;
+}
+
+#add-task:hover{
+    cursor: pointer;
+}
+
+[id^="to-do-delete-"]{
+    display: none;
+}
+
+[id^="to-do-delete-"].show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 31px;
+    width: 71px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    margin-top: 2px;
+    background-color: #FFFFFF;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #DF0000;
+}
+
+[id^="to-do-delete-"].show:hover{
+    cursor: pointer;
+}
+
+[id^="to-do-delete-icon-"]{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #DF0000;
+}
+
+#to-do-card-settings{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.task{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    width: 280px;
+    min-height: 74px;
+    height: fit-content;
+    overflow-wrap: break-word;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+
+.task-name{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+    color: #141414;
+    margin-bottom: 10px;
+}
+
+
+.see-more{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #141414;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.see-more:hover{
+    cursor: pointer;
+}
+
+.see-more:focus{
+    color: #226ED8;
+}
+
+#doing-card-settings{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+[id^="doing-delete-"]{
+    display: none;
+}
+
+[id^="doing-delete-"].show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 31px;
+    width: 71px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    margin-top: 2px;
+    background-color: #FFFFFF;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #DF0000;
+}
+
+[id^="doing-delete-"].show:hover{
+    cursor: pointer;
+}
+
+[id^="doing-delete-icon-"]{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #DF0000;
+}
+
+.task-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#navigate{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-button{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    background: #226ED8;
+    margin-left: 10px;
+    border: 1px solid #226ED8;
+}
+
+.left-button:hover{
+    cursor: pointer;
+}
+
+.right-button{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #226ED8;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #226ED8;
+}
+
+.right-button:hover{
+    cursor: pointer;
+}
+
+.stage-tittle{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #141414;
+}
+
+#doing-task-content{
+    width: 200px;
+    overflow-wrap: break-word;
+}
+
+#see-description-icon{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #141414;
+    background-color: #FFFFFF;
+}
+
+#see-description-icon:hover{
+    cursor: pointer;
+}
+
+.see-description{
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: #141414;
+}
+
+.description{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #141414;
+    margin-top: 6px;
+}
+
+
+/* DONE */
+
+#done-task-name{
+    text-decoration: line-through;
+}
+
+[id^="done-delete-"]{
+    display: none;
+}
+
+[id^="done-delete-"].show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 31px;
+    width: 71px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    margin-top: 2px;
+    background-color: #FFFFFF;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #DF0000;
+}
+
+[id^="done-delete-"].show:hover{
+    cursor: pointer;
+}
+
+[id^="done-delete-icon-"]{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #DF0000;
+}
+
+#done-card-settings{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+/* ADICIONAR TASK */
+
+#new-task{
+    display: none;
+}
+
+#new-task.show{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background: rgba(20, 20, 20, 0.4);
+}
+
+#new-task-modal{
+    width: 474px;
+    height: 421px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 30px 50px 40px 50px;
+}
+
+#modal-header{
+    display: flex;
+    justify-content: space-between;
+
+}
+#modal-tittle-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-tittle{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #3867D6;
+    margin-left: 118px;
+}
+
+#linha-azul{
+    width: 121px;
+    height: 3px;
+    background: #3867D6;
+    border-radius: 10px;
+    margin-left: 118px;
+}
+
+.modal-close{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    width: 30px;
+    height: 30px;
+    color: #3867D6;
+    border: 2px solid  #226ED8;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.modal-close:hover{
+    cursor: pointer;
+}
+
+#new-task-tittle{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #141414;
+    margin: 42px 0px 6px;
+}
+
+#new-task-tittle-form{
+    width: 374px;
+    height: 40px;
+    background: #EEEEEE;
+    border-radius: 10px;
+    border: none;
+
+}
+
+#new-task-description-form{
+    width: 374px;
+    height: 90px;
+    background: #EEEEEE;
+    border-radius: 10px;
+    border: none;
+}
+
+#new-task-description{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #141414;
+    margin: 20px 0px 6px;
+
+}
+
+#create-task{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    width: 374px;
+    height: 41px;
+    background: linear-gradient(90.35deg, #4890F5 0%, #226ED8 99.7%);
+    border-radius: 20px;
+    border: none;
+    margin-top: 40px;
+}
+
+#create-task:hover{
+    cursor: pointer;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    top: 670px;
+    background: #114FA7;;
+}
+
+.footer-processo-de-trainee{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+#link-unect{
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-authorship{
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+#footer-icon{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 5px;
+    color: #FFAFAF;
+}
+
+#madeby{
+    font-weight: bold;
+    margin: 0px 5px;
+}
+
+

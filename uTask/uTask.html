@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>uTask 3.0</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_responsive.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="new_task.js" defer></script>
+    <script src="add_task.js" defer></script>
+    <script src="delete.js" defer></script>
+    <script src="fdd_modal.js" defer></script>
+    <script src="see_description.js" defer></script>
+</head>
+
+<body>
+    <header id="header-content">
+        <img src="logo.svg" alt="Logo da Unect">
+        <h1 id="header-tittle">uTask 3.0</h1>
+        <div id="dark-mode-toggle">
+            <span id="light_mode" class="material-icons-outlined">light_mode</span>
+        </div>
+    </header>
+    <main id="main-content">
+        <section id="frase-do-dia" >
+            <div id="frase-do-dia-lighter-background">
+                <span id="frase-do-dia-icon" class="material-icons-outlined">tips_and_updates</span>
+            </div>
+            <div id="frase-do-dia-content">
+                <h1 id="frase-do-dia-titulo">Frase do dia</h1>
+                <p id="frase-do-dia-mensagem">Sobe, sobe, sobe na kombinha!</p>
+            </div>
+        </section>
+        <section id="fdd-responsive" class="">
+            <div id="fdd-modal">
+                <div id="fdd-modal-header">
+                    <div id="fdd-modal-tittle-combo">
+                        <div id="fdd-modal-icon-background">
+                            <span id="fdd-modal-icon" class="material-icons-outlined">tips_and_updates</span>
+                        </div>
+                        <h1 id="fdd-modal-tittle">Frase do dia</h1>
+                    </div>
+                    <button id="fdd-modal-close" class="modal-close">
+                        <span  class="material-icons-outlined">close</span>
+                    </button>
+                </div>
+                <p id="fdd-modal-text">Sobe, sobe, sobe na kombinha!</p>
+            </div>
+        </section>
+        <section id="task-list">
+            <button id="slider-back">
+                <span class="material-icons-outlined">navigate_before</span>
+            </button>
+            <div class = "task-list-content">
+                <div id="to-do">
+                    <div id="head-task-to-do">
+                        <h1 id="to-do-tittle" class="stage-tittle">A fazer</h1>
+                        <button id="add-task">
+                            <span class="material-icons-outlined">add</span>
+                        </button>
+                    </div>
+                    <ul id="to-do-task-list" class="tasks"></ul>
+                </div>
+                <div id="doing">
+                    <h1 id="doing-tittle" class="stage-tittle">Em andamento</h1>
+                    <ul id="doing-task-list" class="tasks"></ul>
+                </div>
+                <div id="done">
+                    <h1 id="done-tittle" class="stage-tittle">Feito</h1>
+                    <ul id="done-task-list" class="tasks"></ul>
+                </div>
+            </div>
+            <button id="slider-next">
+                <span class="material-icons-outlined">navigate_next</span>
+            </button>
+        </section>
+        <section id="new-task" class="">
+            <div id="new-task-modal">
+                <div id="modal-header">
+                    <div id="modal-tittle-container">
+                        <h1 id="modal-tittle">Nova Task</h1>
+                        <div id="linha-azul"></div>
+                    </div>
+                    <button id="nt-modal-close" class="modal-close">
+                        <span class="material-icons-outlined">close</span>
+                    </button>
+                </div>
+                <h1 id="new-task-tittle">Título *</h1>
+                <form>
+                    <input id="new-task-tittle-form" type="text" name="tittle">
+                    <h1 id="new-task-description">Descrição</h1>
+                    <input id="new-task-description-form" type="text" name="description">
+                </form>
+                <button id="create-task">
+                    <p>Criar task</p>
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-content">
+        <h1 class="footer-processo-de-trainee">© Processo de Trainee <a id="link-unect" href="https://unect.com.br/">
+                Unect Jr.</a> 2023.1</h1>
+        <h1 class="footer-authorship">Feito com 
+                <span id="footer-icon" class="material-icons-outlined">favorite</span> 
+                por <span id="madeby"> Betina Juliano </span>
+        </h1>
+    </footer>
+</body>
+
+</html>
